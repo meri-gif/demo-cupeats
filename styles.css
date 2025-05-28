@@ -13,11 +13,92 @@
       box-sizing: border-box;
     }
 
-   body {
-  font-family: 'Fredoka', sans-serif;
-  background: #fff; /* Arka planı düz beyaz yaptık */
-  color: var(--navy);
-  overflow-x: hidden;
+  body {
+      background-color: #fefaf5;
+      font-family: Arial, sans-serif;
+      padding: 50px 20px;
+    }
+
+    .cards {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 30px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .card {
+      background-color: white;
+      border-radius: 20px;
+      padding: 25px;
+      width: 250px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .icon-wrapper {
+      width: 64px;
+      height: 64px;
+      border: 6px solid #f78d43;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .icon-wrapper img {
+      width: 28px;
+      height: 28px;
+    }
+
+    .card-title {
+      font-weight: bold;
+      font-size: 16px;
+      color: #157701;
+    }
+
+    .card-subtitle {
+      font-weight: bold;
+      font-size: 14px;
+      color: #920000;
+    }
+
+    .card-text {
+      font-size: 14px;
+      color: #333;
+      line-height: 1.4;
+    }
+
+    @media (max-width: 600px) {
+      .card {
+        width: 100%;
+      }
+    }
+.hero-text-box {
+  background-color: rgba(255, 255, 255, 0.75);
+  padding: 32px 28px;
+  border-radius: 24px;
+  text-align: center;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 6px 32px rgba(0,0,0,0.2);
+  max-width: 540px;
+  animation: heroFadeIn 1.2s ease-out both;
+}
+
+@keyframes heroFadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.85) translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
 }
 
 .hero {
@@ -28,7 +109,7 @@
   align-items: center;
   padding: 60px 20px;
   position: relative;
-  background: url('KAPAK-A.PNG') no-repeat center center;
+  background: url('KAPAK-A.png') no-repeat center center;
   background-size: cover;
 }
 .hero::after {
@@ -154,28 +235,21 @@
 }
 
 .feature {
-  background: #fff;
-  border-radius: 24px;
-  box-shadow: 0 2px 12px rgba(44,62,80,0.07);
-  padding: 32px 18px 24px 18px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  max-width: 220px;
-  flex: 1 1 180px;
-  transition: box-shadow 0.2s, transform 0.2s;
+  background: linear-gradient(145deg, #fff, #f7f7f7);
+  border: 2px solid #eee;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  border-radius: 28px;
+  transition: 0.3s ease;
 }
-
 .feature:hover {
-  box-shadow: 0 8px 32px rgba(44,62,80,0.13);
-  transform: translateY(-4px) scale(1.03);
+  transform: scale(1.04);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.12);
 }
-
 .icon-circle {
+  background: linear-gradient(to top right, var(--orange), var(--yellow));
   width: 88px;
   height: 88px;
   border-radius: 50%;
-  background: #f5f5f5;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -367,9 +441,13 @@ h3 {
   transform: scale(1.08) rotate(-2deg);
 }
 .product-modern-info {
-  flex: 2;
-  padding: 48px 48px 48px 0;
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(6px);
+  padding: 48px;
+  border-radius: 24px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.1);
   text-align: left;
+  transition: 0.3s ease;
 }
 .product-modern-info h2 {
   color: var(--navy);
@@ -394,7 +472,26 @@ h3 {
 .product-modern.reverse .product-modern-info {
   padding: 48px 0 48px 48px;
 }
-
+@media (max-width: 1100px) {
+  .product-modern-info,
+  .product-modern.reverse .product-modern-info {
+    padding: 32px 12px;
+  }
+  .product-modern-image img {
+    margin: 24px;
+    max-width: 280px;
+    max-height: 200px;
+  }
+}
+@media (max-width: 900px) {
+  .products-modern {
+    padding: 0 8px;
+  }
+  .product-modern,
+  .product-modern.reverse {
+    flex-direction: column;
+    min-height: unset;
+  }
   .product-modern-info,
   .product-modern.reverse .product-modern-info {
     padding: 24px 8px;
@@ -465,7 +562,7 @@ h3 {
   .gallery-item img {
     height: 140px;
   }
-
+}
 .contact-section {
   max-width: 900px;
   margin: 60px auto 40px auto;
@@ -549,9 +646,10 @@ h3 {
 }
 
 .comments-section h2 {
-  font-size: 28px;
+  font-size: 32px;
   color: var(--navy);
   margin-bottom: 32px;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.05);
 }
 
 .comments-grid {
@@ -563,7 +661,8 @@ h3 {
 }
 
 .comment-card {
-  background: #fff;
+  background: linear-gradient(135deg, #fffaf3, #fdf2e9);
+  border-left: 6px solid var(--yellow);
   border-radius: 22px;
   box-shadow: 0 4px 24px rgba(0,0,0,0.08);
   padding: 28px 22px;
@@ -573,13 +672,14 @@ h3 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  transition: box-shadow 0.3s, transform 0.3s;
+  transition: transform 0.3s, box-shadow 0.3s, background 0.4s ease;
   margin-bottom: 0;
 }
 
 .comment-card:hover {
+  transform: scale(1.04) rotateZ(-1deg);
+  background: linear-gradient(135deg, #fff2eb, #ffe8d4);
   box-shadow: 0 8px 32px rgba(0,0,0,0.13);
-  transform: translateY(-4px) scale(1.03);
 }
 
 .comment-avatar {
@@ -589,6 +689,7 @@ h3 {
   object-fit: cover;
   margin-bottom: 16px;
   border: 3px solid var(--sage);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.1);
 }
 
 .comment-content {
@@ -606,6 +707,7 @@ h3 {
   font-size: 16px;
   color: #444;
   margin: 0;
+  line-height: 1.5;
 }
 
 @media (max-width: 700px) {
@@ -614,4 +716,75 @@ h3 {
     gap: 18px;
     align-items: center;
   }
+}
+
+.price-section {
+  max-width: 1100px;
+  margin: 60px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.price-section h2 {
+  font-size: 32px;
+  color: var(--navy);
+  margin-bottom: 40px;
+}
+
+.price-cards {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.price-card {
+  background: linear-gradient(to top, #fff, #fafafa);
+  border: 1px solid #eee;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.08);
+  border-left: 5px solid var(--red-orange);
+  border-radius: 20px;
+  padding: 32px 22px;
+  max-width: 280px;
+  flex: 1 1 240px;
+  transition: 0.3s ease;
+}
+
+.price-card:hover {
+  transform: translateY(-5px) scale(1.04);
+}
+
+.price-card h3 {
+  font-size: 20px;
+  color: var(--red-orange);
+  margin-bottom: 10px;
+}
+
+.price-card .price {
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--navy);
+  margin-bottom: 10px;
+}
+
+.price-card p {
+  font-size: 16px;
+  color: #555;
+}
+
+.add-to-cart {
+  margin-top: 16px;
+  padding: 12px 24px;
+  border-radius: 24px;
+  border: none;
+  background: var(--orange);
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.add-to-cart:hover {
+  background: var(--red-orange);
 }
