@@ -18,11 +18,7 @@
       font-family: Arial, sans-serif;
       padding: 50px 20px;
     }
-.container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
+
     .cards {
       display: flex;
       justify-content: center;
@@ -113,7 +109,7 @@
   align-items: center;
   padding: 60px 20px;
   position: relative;
-  background: url('K.png') no-repeat center center;
+  background: url('KAPAK-A.png') no-repeat center center;
   background-size: cover;
 }
 .hero::after {
@@ -178,10 +174,15 @@
       margin-bottom: 20px;
       text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
     }
+    .hero h1 span {
+      color: var(--yellow);
+      font-weight: bold;
+    }
+
 
     .hero p {
       font-size: 20px;
-      color: #fff9f3;
+      color: #ffa825;
       margin-bottom: 40px;
     }
 
@@ -792,3 +793,108 @@ h3 {
 .add-to-cart:hover {
   background: var(--red-orange);
 }
+.price-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 16px 0 0 0;
+  font-size: 14px;
+  color: #666;
+}
+.price-card ul li {
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+}
+.price-card ul li::before {
+  content: "✔";
+  color: var(--yellow);
+  margin-right: 8px;
+  font-weight: bold;
+}
+@media (max-width: 700px) {
+  .price-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+  .price-card {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+}
+.footer {
+  background: #f6f6f6;
+  padding: 40px 20px;
+  text-align: center;
+  color: #666;
+  font-size: 14px;
+  border-top: 1px solid #e0e0e0;
+}
+.footer p {
+  margin: 0;
+}
+.order-btn {
+  background-color: #f90;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+    .form-container {
+      max-width: 500px;
+      margin: 60px auto;
+      background-color: #fff;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      text-align: center;
+      color: #ff6f00;
+      margin-bottom: 30px;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      color: #333;
+      font-weight: 600;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 12px;
+      margin-top: 8px;
+      border: 2px solid #ffd699;
+      border-radius: 10px;
+      box-sizing: border-box;
+      font-size: 16px;
+    }
+
+    button {
+      margin-top: 25px;
+      width: 30%;
+      padding: 15px;
+      background-color: #ff6f00;
+      color: white;
+      font-size: 18px;
+      font-weight: bold;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #e65c00;
+    }
+
+    .note {
+      margin-top: 15px;
+      font-size: 14px;
+      color: #570000;
+      text-align: center;
+    }

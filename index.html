@@ -9,7 +9,7 @@
      </style>
 </head>
 <body>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <header>
     <div class="logo">Cupeats</div>
     <nav>
@@ -27,7 +27,8 @@
     <div class="decor decor2"></div>
     <div class="decor decor3"></div>
 
-    <h1>Yenilebilir Bardaklarla Tanış!</h1>
+    <h1>Yenilebilir Bardakla Tanış</h1>
+    
     <p>Cupeats ile hem doğayı koru hem de keyfine bak. %100 eğlenceli, %100 sürdürülebilir.</p>
     <button>Hemen Keşfet</button>
   </section>
@@ -84,8 +85,7 @@
       <div class="product-modern-info">
         <h2>Neden Cupeats?</h2>
         <p>
-          Doğal ve yenilebilir malzemeler kullanarak ekolojik
-          ayak izimizi en aza indirmek
+        
         </p>
         <ul>
           <li>🌱 %100 Doğada Çözünebilir: Plastik ya da kağıt atık bırakmaz, çevreyi kirletmez.</li>
@@ -101,8 +101,7 @@
       <div class="product-modern-info">
         <h2>Fark Yaratan Özelliklerimiz</h2>
         <p>
-          Cupeats bardakları, içeceğinizle uyumlu lezzetler sunar. 
-          Hem görsel hem de damak tadınıza hitap eder.
+          
         </p>
         <ul>
           <li>🧁 Farklı Tat ve Aromalar: Kahveyle uyumlu çeşitlerle lezzetli bir deneyim.</li>
@@ -118,7 +117,7 @@
       <div class="product-modern-info">
         <h2> Hedefimiz Ne?</h2>
         <p>
-          Katkısız ve sade lezzetiyle her türlü içeceğe uyum sağlamak. Minimalist ve doğa dostu seçim!
+          
         </p>
         <ul>
           <li>🌍 Plastik Atıkları Azaltmak: Küresel ölçekte tek kullanımlık plastik tüketimine çözüm üretmek.</li>
@@ -145,6 +144,7 @@
     <div class="gallery-item">
       <img src="R5.jpg" alt="Galeri 4">
     </div>
+
   
     
    
@@ -177,6 +177,34 @@
     </div>
   </div>
 </section>
+ <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="form-container">
+    <h1>🍓 Cupeats Sipariş</h1>
+    <form action="https://formsubmit.co/seninemailin@gmail.com" method="POST">
+      <label for="isim">Ad Soyad:</label>
+      <input type="text" id="isim" name="isim" required>
+
+      <label for="telefon">Telefon:</label>
+      <input type="tel" id="telefon" name="telefon" required>
+
+      <label for="adres">Adres:</label>
+      <textarea id="adres" name="adres" rows="4" required></textarea>
+
+      <label for="urun">Sipariş Detayı:</label>
+      <input type="text" id="urun" name="urun" placeholder="" required>
+
+      <button type="submit">Sipariş Ver</button>
+
+      <p class="note">💌 Siparişiniz e-posta ile bize iletilecektir.</p>
+    </form>
+  </div>
+ 
+  </form>
   <h2>Bize Ulaşın</h2>
   <div class="contact-content">
     <div class="contact-info">
@@ -200,6 +228,24 @@
 </section>
 <img src="logo1.png" class="scroll-top-logo" onclick="window.scrollTo({top:0,behavior:'smooth'})" alt="Yukarı Dön">
 <link rel="stylesheet" href="styles.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="styles.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>
 
+  document.addEventListener("DOMContentLoaded", function() {
+    const scrollTopLogo = document.querySelector(".scroll-top-logo");
+    scrollTopLogo.style.display = "none";
+
+    window.addEventListener("scroll", function() {
+      if (window.scrollY > 300) {
+        scrollTopLogo.style.display = "block";
+      } else {
+        scrollTopLogo.style.display = "none";
+      }
+    });
+  });
+
+</script>
 </body>
 </html>
