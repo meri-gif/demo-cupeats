@@ -109,7 +109,7 @@
   align-items: center;
   padding: 60px 20px;
   position: relative;
-  background: url('KAPAK-A.png') no-repeat center center;
+  background: url('K.png') no-repeat center center;
   background-size: cover;
 }
 .hero::after {
